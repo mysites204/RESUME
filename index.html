@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY RESUME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@300;400;600&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f5f7;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 30px;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-family: 'Lora', serif;
+            margin-bottom: 10px;
+        }
+
+        header h3 {
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin: 20px 0;
+            object-fit: cover;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8em;
+            color: #333;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #007bff;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .experience-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: scale(1.05);
+        }
+
+        .experience-item h3 {
+            color: #007bff;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .experience-item p {
+            font-size: 1em;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1em;
+            border: 1px solid #e2e2e2;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            background: #007bff;
+            color: white;
+            padding: 12px 25px;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-item:hover {
+            background-color: #0056b3;
+        }
+
+        .personal-info ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+
+        .personal-info li {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Mobile-First Approach */
+        @media (max-width: 768px) {
+            body {
+                padding: 0 15px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header h3 {
+                font-size: 1em;
+            }
+
+            .experience-item {
+                padding: 15px;
+            }
+
+            .skill-item {
+                padding: 10px 15px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+
+            table {
+                width: 100%;
+                overflow-x: auto;
+                display: block;
+                white-space: nowrap;
+            }
+
+            th, td {
+                font-size: 1em;
+            }
+
+            .personal-info ul {
+                margin-left: 20px;
+            }
+
+            .skills-list {
+                justify-content: space-between;
+            }
+
+            .skill-item {
+                font-size: 0.9em;
+                padding: 8px 18px;
+            }
+        }
+
+        /* iOS and Android Specific Styling */
+        @media (max-width: 576px) {
+            header {
+                padding: 20px;
+            }
+
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header h3 {
+                font-size: 1em;
+            }
+
+            .content-section p {
+                font-size: 1em;
+            }
+
+            .experience-item {
+                padding: 12px;
+            }
+
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.9em;
+            }
+
+            .skills-list {
+                justify-content: space-between;
+            }
+
+            .skill-item {
+                font-size: 0.9em;
+                padding: 8px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="467956313_1092508515875896_8119573602819213550_n.png" alt="Profile Image" class="profile-image">
+            <h1>HARSH INDREKAR</h1>
+            <h3>Mobile No. 9662024858 | Email: <u>harshindrekar5@gmail.com</u></h3>
+        </header>
+
+        <!-- Career Objective Section -->
+        <div class="section-title">CAREER OBJECTIVE</div>
+        <div class="content-section">
+            <p><b>Seeking a respectable profile which provides an opportunity to grow and add value to the organization.</b></p>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section-title">EXPERIENCE</div>
+        <div class="content-section">
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <h3>State Bank of India Ahmedabad - Telesales Executive</h3>
+                    <p><b>Worked as a telesales executive, responsible for selling IRCTC SBI credit cards. I worked for 6 months from <strong>02-Apr-2023 to 15-Oct-2023</strong>.</p>
+                </li>
+                <li class="experience-item">
+                    <h3>MediaTech Company Ahmedabad - Data Operator</h3>
+                    <p>Worked as part of a data operator team to create lookbooks for Myntra’s customers. I worked for 5 months from <strong>01-Jan-2024 to 01-May-2024</strong>.</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section-title">EDUCATION</div>
+        <div class="content-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Qualification</th>
+                        <th>Board/University</th>
+                        <th>Year of Passing</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S.S.C</td>
+                        <td>GSEB</td>
+                        <td>2015</td>
+                        <td>PASS</td>
+                    </tr>
+                    <tr>
+                        <td>H.S.C</td>
+                        <td>GSEB</td>
+                        <td>2017</td>
+                        <td>PASS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section-title">SKILLS</div>
+        <p>Good communication and interpersonal skills, basic computer knowledge,Ms office and advanced excel skills,VLOOKUP,INDEX-MATCH,POWER QUERY,MARCOS(VBA)work ethic and teamwork.</p>
+		</div>
+
+        <!-- Personal Information Section -->
+        <div class="section-title">PERSONAL INFORMATION</div>
+        <div class="content-section">
+            <ul class="personal-info">
+                <li>Date of Birth: 02-08-1997</li>
+                <li>Father Name: MR.VIKAS INDREKAR</li>
+                <li>Hobbies: Reading Books, Traveling</li>
+                <li>Languages: English, Hindi</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
